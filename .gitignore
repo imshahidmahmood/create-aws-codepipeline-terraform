@@ -1,0 +1,37 @@
+# Terraform specific files
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Terraform variable files
+*.tfvars
+
+# Crash log files
+crash.log
+crash.*
+
+# Extension directories and files
+.terraformrc
+.terraform.d/
+
+# Local .env files
+.env
+.env.*
+
+# Sensitive information
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+
+# macOS specific files
+.DS_Store
+
+# IDE specific files
+.vscode/
+
+# Logs and temp files
+*.log
+*.tmp
