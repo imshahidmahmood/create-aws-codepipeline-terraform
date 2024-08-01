@@ -56,6 +56,18 @@ resource "aws_codepipeline" "codepipeline" {
       }
     }
   }
+
+  trigger {
+    provider_type = "CodeStarSourceConnection"
+    git_configuration {
+      source_action_name = "Source"
+      push {
+        tags {
+          includes = ["deploy-*"]
+        }
+      }
+    }
+  }
 }
 
 resource "aws_codepipeline_webhook" "source_webhook" {
